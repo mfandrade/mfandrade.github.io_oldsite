@@ -58,7 +58,7 @@ faça o download e proceda a instalação do Java JDK antes de continuar.
 ## Instalando o Maven
 
 O procedimento de instalação do Maven é bem trivial: apenas vá até o site
-http://maven.apache.org/download.html e baixe a versão mais recente do Maven
+<http://maven.apache.org/download.html> e baixe a versão mais recente do Maven
 (no momento da publicação deste artigo, esta era a versão 3.3.3).  A seguir,
 simplesmente descompacte o arquivo baixado em algum local de sua escolha em seu
 computador.  Se você usa Windows, atente apenas para não deixar o Maven em
