@@ -1,9 +1,9 @@
-title: Long Haul
-description: Long Form Jekyll theme built with SASS / COMPASS / SUSY
+title: Marcelo Andrade
+description: Technology with something to say
 
-url: http://brianmaierjr.github.com/long-haul
+url: http://marceloandrade.info
 baseurl: ""
-paginate_path: "blog/page:num/"
+paginate_path: "/blog/page:num/"
 permalink: blog/:title/
 
 markdown: redcarpet
@@ -19,9 +19,10 @@ navigation:
    url: /contact
 
 social:
-   github: brianmaierjr
-   twitter: brianmaierjr
-   facebook: brianmaierjr
-   email: brimaidesigns@gmail.com
+   github: mfandrade
+   twitter: mfandrade
+   facebook: mfandrade1
+   email: mfandrade@gmail.com
 
-google_analytics: "UA-58263416-1"
+google_analytics: "UA-58417175-1"
+disqus_comments: "mfandrade"
