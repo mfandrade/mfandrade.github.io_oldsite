@@ -4,9 +4,9 @@ layout: post
 tags: [first-steps, maven, java, dependency-management, tool]
 ---
 
-Quem começa a estudar a linguagem de programação Java, logo de cara se depara
-com o conceito de [classpath](http://www.guj.com.br/articles/108), ou seja,
-onde ficarão as classes que compõem os nossos programas.
+<p class="intro"><span class="dropcap">Q</span>uem começa a estudar a linguagem
+de programação Java, logo de cara se depara com o conceito de <a href="http://www.guj.com.br/articles/108">classpath</a>,
+ou seja, onde residirão as classes que compõem os nossos programas.</p>
 
 Conforme vamos criando projetos Java maiores e mais complexos, essa questão
 vai ficando ainda mais complicada.  Para utilizar funcionalidades de bibliotecas
@@ -40,7 +40,7 @@ A melhor maneira de começar com Maven é pôr a mão na massa.  Para isso, vamo
 instalá-lo em nossa máquina e usá-lo para criar um projeto simples, explorado
 os conceitos envolvidos em cada passo.
 
-# Pré-requisito
+## Pré-requisito
 
 O Maven é uma ferramenta escrita em Java.  Portanto, ter a máquina virtual Java
 instalada é um pré-requisito para se instalar o Maven.  E como é uma ferramenta
@@ -53,10 +53,10 @@ $ javac -version
 javac 1.8.0_45
 ```
 No meu caso, tenho o Java padrão da Oracle versão 1.8.  Se você receber uma
-mensagem de erro de comando ou arquivo não encontrado, acesse http://java.sun.com
+mensagem de erro de comando ou arquivo não encontrado, acesse <http://java.sun.com>,
 faça o download e proceda a instalação do Java JDK antes de continuar.
 
-# Instalando o Maven
+## Instalando o Maven
 
 O procedimento de instalação do Maven é bem trivial: apenas vá até o site
 http://maven.apache.org/download.html e baixe a versão mais recente do Maven
@@ -95,13 +95,13 @@ orientações acima conferindo se baixou, descompactou e definiu o PATH corretam
 
 Se tudo deu certo, estamos prontos para criarmos nosso primeiro projeto com Maven.
 
-# Criando um projeto com Maven
+## Criando um projeto com Maven
 
 Para criar um projeto Maven básico, pode-se executar o seguinte comando:
 
 ```
-$ mvn archetype:generate -DartifactId=ola-mundo -DgroupId=info.marceloandrade -DinteractiveMode=false
-
+$ mvn archetype:generate -DartifactId=ola-mundo -DgroupId=info.marceloandrade \
+-DinteractiveMode=false
 ```
 
 Uma primeira característica que você perceberá é que o Maven é bastante
@@ -131,31 +131,37 @@ rápido.
 Antes de analisarmos o que o Maven acabou de fazer ao criar nosso projeto,
 vamos entender melhor o comando que acabamos de executar.
 
-* `mvn`: O mvn é o próprio binário do Maven em si.
+<dl>
+  <dt><kbd>mvn</kbd></dt>
+  <dd>O mvn é o próprio binário do Maven em si.</dd>
 
-* `archetype:generate`: O Maven chama os diversos tipos de projetos Java de
-"archetypes" (_arquétipos_).  Este parâmetro `archetype:generate` é chamado de
-_goal_, que é a tarefa que se quer executar.  Neste caso está se invocando a
-tarefa `generate` disponível no plugin `archetype` do Maven.
+  <dt><kbd>archetype:generate</kbd></dt>
+  <dd>O Maven chama os diversos tipos de projetos Java de "archetypes" (arquétipos).
+  Este parâmetro <kbd>archetype:generate</kbd> é chamado de <i>goal</i>, que é
+  a tarefa que se quer executar.  Neste caso está se invocando a tarefa <kbd>generate</kbd>
+  disponível no plugin <kbd>archetype</kbd> do Maven.</dd>
 
-* `-DartifactId=ola-mundo`: O `-D` é o parâmetro que se usa para passar
-propriedades (pares de chave-valor) para o Java e que também se usa aqui.  O
-termo do Maven para projetos é "artifact".  E neste caso o nome do nosso
-projeto é dado pela propriedade "artifactId".
+  <dt><kbd>-DartifactId=ola-mundo</kbd></dt>
+  <dd>O <kbd>-D</kbd> é o parâmetro que se usa para passar propriedades (pares de chave-valor)
+  para o Java e que também se usa aqui.  O termo do Maven para projetos é "artifact".  E
+  neste caso o nome do nosso projeto é dado pela propriedade "artifactId".</dd>
 
-* `-DgroupId=info.marceloandrade`: A propriedade `groupId` é usada para agrupar
-e dar unicidade para os projetos (como um [_namespace_](http://pt.wikipedia.org/wiki/Namespace))
-Isso nos permitiria identificar unicamente nosso projeto nos repositórios do
-Maven, mesmo que nosso projeto tenha um nome possivelmente muito comum (como é
-o caso de nosso "ola-mundo").  Apesar de não ser uma regra, é uma convenção
-quase unânime no mundo Java que se utilize o domínio do site do programador de
-trás para frente como base para o valor do groupId.
+  <dt><kbd>-DgroupId=info.marceloandrade</kbd></dt>
+  <dd>A propriedade `groupId` é usada para agrupar e dar unicidade para os projetos
+  (como um <a href="http://pt.wikipedia.org/wiki/Namespace"><i>namespace</i></a>.
+  Isso nos permitiria identificar unicamente nosso projeto nos repositórios do
+  Maven, mesmo que nosso projeto tenha um nome possivelmente muito comum (como é
+  o caso de nosso "ola-mundo").  Apesar de não ser uma regra, é uma convenção
+  quase unânime no mundo Java que se utilize o domínio do site do programador de
+  trás para frente como base para o valor do groupId.</dd>
 
-* `-DinteractiveMode=false`: O Maven também pode ser executado em modo
-interativo, isto é, pausando sua execução para solicitar que o usuário informe
-opções ou confirme as ações antes de executar.  Passando `interactiveMode` como
-false, fazemos o Maven assumir valores default para os parâmetros não-obrigatórios
-neste goal e executar até o fim sem solicitar nossa intervenção.
+  <dt><kbd>-DinteractiveMode=false</kbd></dt>
+  <dd>O Maven também pode ser executado em modo interativo, isto é, pausando
+  sua execução para solicitar que o usuário informe opções ou confirme as ações
+  antes de executar.  Passando <kbd>interactiveMode</kbd> como false, fazemos o
+  Maven assumir valores default para os parâmetros não-obrigatórios neste goal
+  e executar até o fim sem solicitar nossa intervenção.</dd>
+</dl>
 
 Experimente depois executar este mesmo comando sem desabilitar o modo
 interativo e veja que o Maven vai lhe solicitar que você defina algumas
@@ -166,7 +172,7 @@ inicialmente ao seu projeto.
 Verifique foi criada uma pasta para nosso projeto, neste caso chamada de
 _ola-mundo_.  Vamos dar uma olhada na estrutura criada para este projeto.
 
-# Estrutura do projeto
+## Estrutura do projeto
 
 Como utilizamos o modo não-interativo, a estrutura de nosso projeto segue o
 arquétipo padrão (que, a propósito, chama-se "maven-archetype-quickstart").
@@ -208,21 +214,18 @@ package info.marceloandrade;
 
 /**
  * Hello world!
- *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main( String[] args ) {
         System.out.println( "Hello World!" );
     }
 }
 ```
 
-Como vêem, esse arquétipo "maven-archetype-quickstart" gera esta classe simples
-que exibe `Hello World!` no console.  Como o objetivo deste artigo é abordar conceitos
-do Maven e não construir um sistema complexo, este projeto serve como bom ponto
-de partida.
+Como vêem, esse arquétipo "maven-archetype-quickstart" gera inicialmente esta
+classe simples que apenas exibe `Hello World!` no console.  Como o objetivo deste
+artigo é abordar conceitos do Maven e não construir um sistema complexo, este
+projeto serve como bom ponto de partida.
 
 O principal arquivo de qualquer projeto Maven é o `pom.xml`.  POM significa
 _Project Object Model_ (projeto de modelo de objeto).  É um arquivo xml em que
@@ -230,7 +233,7 @@ são declaradas todas as informações sobre o projeto.  Há muita coisa para se
 aprender neste arquivo mas que veremos noutra oportunidade.  Por hora, vamos
 utilizar o Maven para compilar, empacotar e executar nosso projeto.
 
-# Compilando e empacotando o projeto
+## Compilando e empacotando o projeto
 
 Como dito, o Maven é uma forma padronizada de se fazer determinadas ações em
 projetos Java. Java é uma linguagem muito assentada em padrões, de uma forma
@@ -281,10 +284,13 @@ Um conceito interessante do Maven é que ele trata cada projeto com um **ciclo d
 vida** composto por **fases**.  A execução de uma fase depende que todas as
 fases anteriores do ciclo de vida tenham sido executadas com sucesso.  Este
 comportamento reproduz sistematicamente o que acontece na realidade.  Por
-exemplo, não é possível empacotar (package) o projeto se seus testes (test)
-estiverem falhando.  Da mesma forma, se o código do projeto estiver com algum
-erro e não conseguir sequer ser compilado (compile), nem adiantará tentarmos
-testá-lo (test), muito menos ele será empacotado (package).
+exemplo, não é possível empacotar o projeto (i.e., fase _package_) se,
+por exemplo, seus testes (fase _test_) estiverem falhando.  Da mesma forma, se o
+código do projeto estiver com algum erro e não conseguir sequer ser compilado (_compile_),
+nem adiantará tentarmos testá-lo, ou muito menos conseguiremos empacotá-lo.
+
+{% comment %} TODO: incluir uma figura das fases e referenciá-la no parágrafo
+abaixo "Mas não é muito...?" ao invés de listar todas as fases lá. {% endcomment %}
 
 Abordaremos mais produndamente o ciclo de vida dos projetos Maven em artigos
 futuros.  Por hora, veja que depois de termos executado com sucesso o comando
@@ -319,15 +325,14 @@ arquivos onde se encontram classes compiladas é chamado de *classpath*, que é 
 que estamos informando explicitamente ao comando `java` neste caso com a opção
 `-classpath`.
 
-"Mas não é muito trabalho apenas para exibir um 'Hello World!'?", você pode
-pensar.  Neste caso talvez sim, mas o objetivo do Maven é padronizar a
-realização de tarefas em Java.  Em projeto maiores e mais complexos, por
-exemplo, em que equipes diferentes fiquem responsáveis por módulos diferentes
-de um grande sistema, não importa como os projetos estejam organizados, em que
-versões do Java tenham sido compilados, ou onde tenham sido disponibilizados no
-sistema de arquivos, você sempre poderá compilar o projeto com `mvn compile`,
-executar testes com `mvn test` e empacotar o projeto para distribuição com `mvn
-package` (há ainda outras fases no ciclo de vida, como veremos noutros artigos).
+_"Mas não é muito trabalho apenas para exibir um 'Hello World!'?"_, você pode
+pensar.  Neste caso talvez sim, mas é bom lembrar que o objetivo do Maven é
+padronizar a realização de tarefas em Java.  Em projeto maiores e mais complexos,
+em que equipes diferentes fiquem responsáveis por módulos diferentes de um grande
+sistema, não importa como os projetos estejam organizados, ou onde tenham sido
+criados no sistema de arquivos nem nada do tipo.  Você sempre poderá compilar o
+projeto projeto com `mvn compile`, executar testes com `mvn test` e empacotar o
+projeto para distribuição com `mvn package`.
 
 Nesse sentido, o Maven é uma ferramenta que também pode facilitar a tarefa de
 integração de sistemas, e também por visar a automatização de tarefas, os conceitos
