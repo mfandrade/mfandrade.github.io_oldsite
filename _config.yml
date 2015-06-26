@@ -25,4 +25,13 @@ social:
    email: mfandrade@gmail.com
 
 google_analytics: "UA-58417175-1"
-disqus_comments: "mfandrade"
+disqus_username: "mfandrade"
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true

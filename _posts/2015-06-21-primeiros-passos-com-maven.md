@@ -1,6 +1,5 @@
 ---
 title: Primeiros passos com Maven
-layout: post
 tags: [first-steps, maven, java, dependency-management, tool]
 ---
 
