@@ -326,9 +326,9 @@ que estamos informando explicitamente ao comando `java` neste caso com a opção
 
 _"Mas não é muito trabalho apenas para exibir um 'Hello World!'?"_, você pode
 pensar.  Neste caso talvez sim, mas é bom lembrar que o objetivo do Maven é
-padronizar a realização de tarefas em Java.  Em projeto maiores e mais complexos,
-em que equipes diferentes fiquem responsáveis por módulos diferentes de um grande
-sistema, não importa como os projetos estejam organizados, ou onde tenham sido
+padronizar a realização de tarefas em Java.  Em projeto maiores e mais complexos
+(em que equipes diferentes fiquem responsáveis por módulos diferentes de um grande
+sistema) não importa como os projetos estejam organizados, ou onde tenham sido
 criados no sistema de arquivos nem nada do tipo.  Você sempre poderá compilar o
 projeto projeto com `mvn compile`, executar testes com `mvn test` e empacotar o
 projeto para distribuição com `mvn package`.
