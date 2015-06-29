@@ -121,7 +121,7 @@ MENU STYLING
   color: white;
   text-decoration: none;
   position: relative;
-  right: 1rem;
+  right: .5rem;
   @include transition(all 0.2s ease-in-out);
 
   &:hover {
