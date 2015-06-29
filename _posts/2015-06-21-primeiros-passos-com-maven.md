@@ -3,20 +3,20 @@ title: Primeiros passos com Maven
 tags: [first-steps, maven, java, dependency-management, tool]
 ---
 
-<p class="intro"><span class="dropcap">Q</span>uem começa a estudar a linguagem
-de programação Java, logo de cara se depara com o conceito de <a href="http://www.guj.com.br/articles/108">classpath</a>,
+<p class="intro"><span class="dropcap">Q</span>uem começa a estudar a linguagem 
+de programação Java, logo de cara se depara com o conceito de <a href="http://www.guj.com.br/articles/108">classpath</a>, 
 ou seja, onde residirão as classes que compõem os nossos programas.</p>
 
-Conforme vamos criando projetos Java maiores e mais complexos, essa questão
-vai ficando ainda mais complicada.  Para utilizar funcionalidades de bibliotecas
-Java devemos incluí-las em nosso projeto.  Com o tempo, manter um conjunto grande
-de bibliotecas, algumas com suas próprias dependências e outras talvez até
-incompatíveis entre si torna-se uma tarefa impraticável de realizar
+Conforme vamos criando projetos Java maiores e mais complexos, essa questão 
+vai ficando ainda mais complicada.  Para utilizar funcionalidades de bibliotecas 
+Java devemos incluí-las em nosso projeto.  Com o tempo, manter um conjunto grande 
+de bibliotecas, algumas com suas próprias dependências e outras talvez até 
+incompatíveis entre si torna-se uma tarefa impraticável de realizar 
 manualmente.
 
-É para atender a essa necessidade, surgem ferramentas para gerenciamento de
-dependências como o [Maven](http://maven.apache.org), com o qual daremos nossos
-primeiros passos neste artigo.
+É para atender a essa necessidade, surgem ferramentas para gerenciamento de 
+dependências como o [Maven](http://maven.apache.org), com o qual daremos nossos 
+primeiros passos neste artigo. 
 
 ## O que é o Maven?
 
