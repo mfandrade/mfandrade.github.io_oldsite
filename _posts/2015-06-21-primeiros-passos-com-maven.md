@@ -11,10 +11,10 @@ Conforme vamos criando projetos Java maiores e mais complexos, essa questão
 vai ficando ainda mais complicada.  Para utilizar funcionalidades de bibliotecas 
 Java devemos incluí-las em nosso projeto.  Com o tempo, manter um conjunto grande 
 de bibliotecas, algumas com suas próprias dependências e outras talvez até 
-incompatíveis entre si torna-se uma tarefa impraticável de realizar 
+incompatíveis entre si, torna-se uma tarefa impraticável de realizar 
 manualmente.
 
-É para atender a essa necessidade, surgem ferramentas para gerenciamento de 
+É para atender a essa necessidade que surgem ferramentas para gerenciamento de 
 dependências como o [Maven](http://maven.apache.org), com o qual daremos nossos 
 primeiros passos neste artigo. 
 
@@ -29,7 +29,7 @@ quando necessário.  Assim, é preciso estar conectado à internet e as primeira
 execuções geralmente levam algum tempo para baixar as bibliotecas que são
 dependências do projeeto além daquelas que o próprio Maven utiliza.
 
-Apesar de ter versões e suportar também outras linguagens e plataforrmas, o Maven
+Apesar de ter versões e suportar também outras linguagens e plataformas, o Maven
 é uma ferramenta bem consolidada no mundo Java.  É utilizado tanto por ambientes
 de desenvolvimento integrados (IDEs) complexos como o [Eclipse](http://eclipse.org),
 mas também é bastante poderoso para permitir a você lidar tranquilamente com projetos
