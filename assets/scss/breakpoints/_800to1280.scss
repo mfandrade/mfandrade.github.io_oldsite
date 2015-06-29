@@ -4,6 +4,7 @@ GLOBAL STYLES
 
 body {
 	font-size: 125%; // 20px base font size
+	line-height: 1.5;  
 }
 
 .content {
@@ -147,6 +148,11 @@ POST STYLING
 		float: none;
 		margin: 0 auto 2rem; 
 	}
+
+  .highlight {
+    float: none;
+    margin: 0 auto 2rem;
+  }
 
 	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 		margin: 1rem auto; 
